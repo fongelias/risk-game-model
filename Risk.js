@@ -42,6 +42,22 @@ const COUNTRIES = {
 
 // Each turn consists of: getting armies, placing armies, attacking, moving
 
+// possible dice rolls:
+// 1-1: 36
+// 1-2: 216
+// 2-1: 216
+// 2-2: 1296
+// 3-1: 1296
+// 3-2: 7776
+
+// equation: 
+// order doesn't matter- combination
+// repetition is allowed- dice are independent and you can roll the same number on different dice
+// n = things to choose from: 6
+// r = number of choices: number of dice rolls
+// (r + n - 1)! / (r! (n - 1)!)
+// we'll need to 
+
 class Dice {
 	roll() {
 		return Math.ceil(Math.random() * 6);
@@ -50,7 +66,7 @@ class Dice {
 
 class Country {
 	constructor() {
-		this.continent = 
+		this.continent = '';
 	}
 }
 
@@ -61,3 +77,7 @@ const ACTIONS = {
 class Actions {
 
 }
+
+
+
+
